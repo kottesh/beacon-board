@@ -1,6 +1,6 @@
 {
   "name": "beacon-board",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Tiny TypeScript status board that summarizes service health for solo projects",
   "type": "module",
   "scripts": {
@@ -10,7 +10,12 @@
     "test": "vitest run",
     "lint": "tsc --noEmit"
   },
-  "keywords": ["status", "healthcheck", "typescript", "cli"],
+  "keywords": [
+    "status",
+    "healthcheck",
+    "typescript",
+    "cli"
+  ],
   "license": "MIT",
   "devDependencies": {
     "@types/node": "latest",
