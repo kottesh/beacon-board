@@ -8,6 +8,9 @@ export interface ServiceCheck {
 }
 
 export function summarizeStatus(checks: ServiceCheck[]) {
+  if (checks.some((check) => check.name.trim().length === 0)) {
+    throw new Error('Service name is required')
+  }
   const down = checks.filter((check) => check.state === 'down')
   const degraded = checks.filter((check) => check.state === 'degraded')
   const overall: ServiceState = down.length > 0 ? 'down' : degraded.length > 0 ? 'degraded' : 'operational'
