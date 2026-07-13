@@ -1,0 +1,27 @@
+name: Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Release version, example v0.3.0
+        required: true
+  push:
+    tags:
+      - 'v*.*.*'
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm install
+      - run: npm run build
+      - run: mkdir -p artifacts && tar -czf artifacts/beacon-board.tgz dist package.json README.md CHANGELOG.md
+      - uses: actions/upload-artifact@v4
+        with:
+          name: beacon-board
+          path: artifacts/beacon-board.tgz
