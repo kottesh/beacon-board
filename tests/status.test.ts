@@ -10,4 +10,13 @@ describe('summarizeStatus', () => {
 
     expect(result.overall).toBe('degraded')
   })
+
+  it('marks board down when any service is down', () => {
+    const result = summarizeStatus([
+      { name: 'api', state: 'operational' },
+      { name: 'worker', state: 'down' }
+    ])
+
+    expect(result.overall).toBe('down')
+  })
 })
