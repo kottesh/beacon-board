@@ -1,6 +1,6 @@
 {
   "name": "beacon-board",
-  "version": "0.5.0",
+  "version": "0.3.0",
   "description": "Tiny TypeScript status board that summarizes service health for solo projects",
   "type": "module",
   "scripts": {

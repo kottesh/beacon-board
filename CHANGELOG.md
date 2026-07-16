@@ -1,17 +1,5 @@
 # Changelog
 
-## v0.5.0 - 2026-07-16
-
-### Changed
-- Tweaked dashboard eyebrow marker.
-- Version bumped 0.4.0 -> 0.5.0.
-
-## v0.4.0 - 2026-07-16
-
-### Changed
-- Dashboard eyebrow now reads "live station watch".
-- Version bumped 0.3.0 -> 0.4.0.
-
 ## v0.3.0 - 2026-07-16
 
 ### Added
