@@ -7,6 +7,6 @@ export function incidentSummary(checks: ServiceCheck[]) {
     affectedServices: affected.map((check) => check.name),
     message: affected.length === 0
       ? 'All services operational.'
-      : `${affected.length} service${affected.length === 1 ? '' : 's'} need attention: ${affected.map((check) => check.name).join(', ')}`
+      : `${affected.length} station${affected.length === 1 ? '' : 's'} ${affected.length === 1 ? 'needs' : 'need'} attention: ${affected.map((check) => check.name).join(', ')}`
   }
 }
