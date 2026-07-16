@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+### Added
+- `healthScore` percentage in `summarizeStatus` output (operational services / total).
+
 ## v0.3.0 - 2026-07-16
 
 ### Added

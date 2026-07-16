@@ -15,11 +15,16 @@ export function summarizeStatus(checks: ServiceCheck[]) {
   const degraded = checks.filter((check) => check.state === 'degraded')
   const overall: ServiceState = down.length > 0 ? 'down' : degraded.length > 0 ? 'degraded' : 'operational'
 
+  const total = checks.length
+  const operational = checks.filter((check) => check.state === 'operational').length
+  const healthScore = total === 0 ? 100 : Math.round((operational / total) * 100)
+
   return {
     overall,
-    total: checks.length,
-    operational: checks.filter((check) => check.state === 'operational').length,
+    total,
+    operational,
     degraded: degraded.length,
-    down: down.length
+    down: down.length,
+    healthScore
   }
 }
