@@ -48,7 +48,7 @@ function render(): string {
           <div class="lamp__sweep"></div>
           <div class="lamp__core"></div>
         </div>
-        <p class="eyebrow">Beacon Board — station watch</p>
+        <p class="eyebrow">Beacon Board — live station watch</p>
         <h1 class="verdict">${v.label}</h1>
         <p class="verdict__line">${v.line}</p>
         <p class="tally">
